@@ -1,6 +1,20 @@
+$background-color :  #02f002;
+$background-color-header :  #db0505;
 $colorkontostand: #05aa9d;
 
+.background{
+  background-color:  $background-color;
+}
+
+.toolbar-background {
+  background-color: $background-color-header;
+}
+
 page-home {
+
+
+
+
 
   .header .wrap {
       width: auto;
