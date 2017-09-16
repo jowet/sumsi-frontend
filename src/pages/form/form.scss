@@ -1,0 +1,133 @@
+$background-color :  #02f002;
+$background-color-header :  #db0505;
+$colorkontostand: #05aa9d;
+
+$kontostand-height: 5.5vh;
+$kontostand-text-height : 3.5vh;
+
+$button-size: $kontostand-height + $kontostand-text-height;
+
+$plus-size: 5.5vh;
+
+$status-height : 3vh;
+
+$card-heigth: 12vh;
+
+$img-heigth: 5vh;
+
+$chore-heigth: 3vh;
+
+// $global-font;
+img{
+  height: $img-heigth;
+  width: $img-heigth !important;
+}
+
+.background{
+  background-color:  $background-color;
+}
+
+.toolbar-background {
+  background-color: $background-color-header;
+
+}
+
+#chore_title{
+  font-weight: bold;
+  font-size:$chore-heigth;
+  text-align: left;
+}
+
+#due_date{
+  font-weight: 300;
+  text-align: left;
+  color: #4a4a4a;
+  width: 100%;
+}
+
+#money{
+  // width: 33.5px;
+  height: $chore-heigth;
+  // font-family: Kollektif;
+  // font-size: 9.5px;
+  // line-height: 1;
+  text-align: right;
+  color: #4a4a4a;
+  line-height: 1;
+    font-weight: bold;
+}
+
+
+#addChores {
+  width: $button-size;
+  height: $button-size;
+  background-color: #05aa9d;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 2.5px 0 rgba(0, 115, 83, 0.25);
+  border: solid 0.5px #05aa9d;
+  font-size: $plus-size;
+  // float: right;
+}
+
+page-form {
+
+  font-family:Helvetica;
+
+
+    .heading-wrapper {
+        width: auto;
+        margin: auto;
+        text-align: left;
+        position: relative;
+    }
+
+    .status {
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      height: $status-height;
+      font-size: $status-height;
+    }
+
+    .Line-Copy-4 {
+      width: auto;
+      height: 1.5px;
+      border: solid 1px #9b9b9b;
+    }
+
+
+  .header .wrap {
+      width: auto;
+      margin: auto;
+      text-align: center;
+      position: relative;
+  }
+
+  .header .wrap .img_1, .header .wrap .img_2 {
+      position: absolute;
+      height: 13,5px;
+      width: auto;
+      top: 25px;
+  }
+
+  .konto-wrap {
+    color: $colorkontostand;
+  }
+
+  .Kontostand {
+    height: $kontostand-height;
+    font-size: $kontostand-height;
+  }
+
+  .Kontostand-text{
+    height: $kontostand-text-height;
+    font-size: $kontostand-text-height;
+  }
+
+  .card{
+    height: $card-heigth;
+    border-radius: 4px !important;
+    background-color: #f0f0f0 !important;
+  }
+
+
+}

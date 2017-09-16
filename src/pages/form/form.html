@@ -1,0 +1,28 @@
+<!--
+  Generated template for the FormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Create Chore</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Chore Name</ion-label>
+      <ion-input type="text"[(ngModel)]="chore_title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Amount</ion-label>
+      <ion-input type="text"[(ngModel)]="amount"></ion-input>
+    </ion-item>
+    </ion-list>
+    <button ion-button block color="secondary" (click)="AddChore()">AddChore</button>
+</ion-content>

@@ -7,12 +7,15 @@ import { HttpModule, Http } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { FormPage } from '../pages/form/form';
 import { ChoresProvider } from '../providers/chores/chores';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    FormPage
+
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { ChoresProvider } from '../providers/chores/chores';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    FormPage
   ],
   providers: [
     StatusBar,

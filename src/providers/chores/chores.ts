@@ -42,5 +42,13 @@ apiString: string;
     return this.http.patch(this.apiString+'/tasks/'+id,JSON.stringify(obj), options).map(resp => resp.json());
   }
 
+  createChore(obj){
+    let headers = new Headers({ 'Content-Type': 'application/json', 'accept': 'application/json' })
+    let options = new RequestOptions({headers: headers});
+
+
+    return this.http.post(this.apiString+'/tasks',JSON.stringify(obj), options).map(resp => resp.json());
+  }
+
 
 }

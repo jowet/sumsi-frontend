@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ChoresProvider } from '../../providers/chores/chores';
+import { FormPage } from '../form/form';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -15,6 +16,10 @@ export class HomePage {
     // self=this;
     this.loadData();
     // console.log('balance'+this.balance);
+
+    window.setInterval(() => {
+      this.loadData();
+    }, 1E3);
     }
 
     markAsDone(id:any){
@@ -28,7 +33,7 @@ export class HomePage {
     }
 
     addChore(){
-      
+      this.navCtrl.push(FormPage);
     }
 
 }
