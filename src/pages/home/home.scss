@@ -10,7 +10,18 @@ $button-size: $kontostand-height + $kontostand-text-height;
 $plus-size: 5.5vh;
 
 $status-height : 3vh;
+
+$card-heigth: 12vh;
+
+$img-heigth: 5vh;
+
+$chore-heigth: 3vh;
+
 // $global-font;
+img{
+  height: $img-heigth;
+  width: $img-heigth !important;
+}
 
 .background{
   background-color:  $background-color;
@@ -18,7 +29,34 @@ $status-height : 3vh;
 
 .toolbar-background {
   background-color: $background-color-header;
+
 }
+
+#chore_title{
+  font-weight: bold;
+  font-size:$chore-heigth;
+  text-align: left;
+}
+
+#due_date{
+  font-weight: 300;
+  text-align: left;
+  color: #4a4a4a;
+  width: 100%;
+}
+
+#money{
+  // width: 33.5px;
+  height: $chore-heigth;
+  // font-family: Kollektif;
+  // font-size: 9.5px;
+  // line-height: 1;
+  text-align: right;
+  color: #4a4a4a;
+  line-height: 1;
+    font-weight: bold;
+}
+
 
 #addChores {
   width: $button-size;
@@ -85,7 +123,11 @@ page-home {
     font-size: $kontostand-text-height;
   }
 
-
+  .card{
+    height: $card-heigth;
+    border-radius: 4px !important;
+    background-color: #f0f0f0 !important;
+  }
 
 
 }

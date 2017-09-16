@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      <img src="../../assets/icon/raiffeisen.png" style="height:20px;">
+      <img src="../../assets/icon/raiffeisen.png" style="height:20px; width: 100%">
     </ion-title>
     <ion-buttons end>
 
@@ -48,14 +48,28 @@
 
     <div *ngFor="let chore of chores">
       <ion-card *ngIf="chore.attributes.state === 'opened'">
-        <div>
-          {{chore.attributes.title}}
-        </div>
-        <div>
-        {{chore.attributes.value/100| currency: 'EUR':true}}
-        </div>
-        <button ion-button (click)="markAsDone(chore.id)">
-        </button>
+        <ion-grid>
+          <ion-row style="height: 10px"></ion-row>
+          <ion-row>
+
+            <ion-col col-2>
+              <img src="../../assets/icon/assets/Status/OK_Copy.png" (click)="markAsDone(chore.id)">
+            </ion-col>
+
+            <ion-col col-8>
+              <div id="chore_title">
+                {{chore.attributes.title}}
+              </div>
+              <div id="due_date">
+                Time until 18.09
+              </div>
+            </ion-col>
+
+            <ion-col width-2>
+              {{chore.attributes.value/100| currency: 'EUR':true}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-card>
     </div>
 
