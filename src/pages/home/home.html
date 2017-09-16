@@ -1,7 +1,9 @@
+<div class="burger"></div>
+<div class="settings"></div>
 <ion-header>
   <ion-navbar>
     <ion-title style="align:center">
-      <h1 class="title" style="text-align: center;"><img class="title-image" src="../../assets/icon/raiffeisen.png" style="width: 200px;"/></h1>
+      <h1 class="title" style="text-align: center;"><img class="title-image" src="../../assets/icon/raiffeisen.png" style="width: 140px;"/></h1>
     </ion-title>
     </ion-navbar>
 </ion-header>
@@ -10,19 +12,19 @@
   <div style="text-align:center">
     <div class="header" style="display: inline">
         <div class="wrap">
-            <h2>Uter's SpeakyBank</h2>
+            <h2 style="color: #4a4a4a">Uter's SpeakyBank</h2>
         </div>
         <div style="height: 4px">
         </div>
-        <ion-grid>
+        <ion-grid class="grid grind-mit-karrrrrusell" style="margin-top: -10px;">
           <ion-row>
             <ion-col width-10></ion-col>
             <ion-col width-80>
               <div class="wrap konto-wrap">
-                <div class="Kontostand">
-                    {{balance/100 | currency: 'EUR':true}}
+                <div class="kontostand">
+                    {{ (balance/100 || 0) | currency: 'EUR':true}}
                 </div>
-                <div class="Kontostand-text">
+                <div class="kontostand-text">
                     Balance
                 </div>
               </div>
@@ -35,9 +37,7 @@
             </ion-row>
         </ion-grid>
     </div>
-
-<div class="Line-Copy-4">
-</div>
+<div class="Line-Copy-4"></div>
 
     <div class="heading-wrapper">
         <div class= "status">To Do</div>
@@ -58,7 +58,7 @@
                 {{chore.attributes.title}}
               </div>
               <div id="due_date">
-                Time until 18.09
+                Until 17. September
               </div>
             </ion-col>
 
@@ -69,7 +69,7 @@
         </ion-grid>
       </ion-card>
     </div>
-
+    <div class="Line-Copy-4"></div>
   </div>
   <div style="text-align:center">
     <div class="heading-wrapper">
@@ -91,7 +91,7 @@
                 {{chore.attributes.title}}
               </div>
               <div id="due_date">
-                Time until 18.09
+                Until 17. September
               </div>
             </ion-col>
 
@@ -102,6 +102,7 @@
         </ion-grid>
       </ion-card>
     </div>
+    <div class="Line-Copy-4"></div>
   </div>
   <div style="text-align:center">
     <div class="heading-wrapper">
@@ -123,7 +124,7 @@
                 {{chore.attributes.title}}
               </div>
               <div id="due_date">
-                Time until 18.09
+                Until 17. September
               </div>
             </ion-col>
 

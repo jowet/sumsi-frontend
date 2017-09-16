@@ -17,11 +17,23 @@ $img-heigth: 5vh;
 
 $chore-heigth: 3vh;
 
+.header .toolbar {
+  height: 64px;
+}
+
+ion-app.ios [padding], ion-app.ios [padding] .scroll-content {
+    padding-top: 24px;
+}
+
 // $global-font;
 // img{
 //   height: $img-heigth;
 //   width: $img-heigth !important;
 // }
+
+.back-button-text {
+  opacity: 0;
+}
 
 .background{
   background-color:  $background-color;
@@ -69,10 +81,6 @@ $chore-heigth: 3vh;
 }
 
 page-form {
-
-  font-family:Helvetica;
-
-
     .heading-wrapper {
         width: auto;
         margin: auto;
@@ -113,12 +121,12 @@ page-form {
     color: $colorkontostand;
   }
 
-  .Kontostand {
+  .kontostand {
     height: $kontostand-height;
     font-size: $kontostand-height;
   }
 
-  .Kontostand-text{
+  .kontostand-text{
     height: $kontostand-text-height;
     font-size: $kontostand-text-height;
   }

@@ -27,7 +27,7 @@ amount;
   }
 
   AddChore(){
-    this.choresProvider.createChore({'task': {'title':this.chore_title, 'value': this.amount}}).subscribe(data => {this.navCtrl.push(HomePage);});
+    this.choresProvider.createChore({'task': {'title':this.chore_title, 'value': this.amount}}).subscribe(data => {this.navCtrl.pop();});
 
   }
 
