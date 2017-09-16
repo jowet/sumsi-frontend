@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import {Observable} from 'rxjs/Rx';
 
 /*
   Generated class for the ChoresProvider provider.
@@ -11,16 +12,23 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ChoresProvider {
 
+apiString: string;
+
+// status:
+
   constructor(public http: Http) {
-    console.log('Hello ChoresProvider Provider');
+    this.apiString = "http://sumsi-api.eu-central-1.elasticbeanstalk.com/api/ledgers/1";
   }
 
+  postChore(id: number, title: string, reward: any){
+    return this.http.get(this.apiString);
+//ledger = 5
+
+
+  }
 
   getChores(){
-    //TODO return chores from AWS Backend
-    //return  
-
-
+    return this.http.get(this.apiString+'/tasks').map(resp => resp.json());
   }
 
 }

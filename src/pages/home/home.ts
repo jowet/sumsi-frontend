@@ -6,10 +6,38 @@ import { ChoresProvider } from '../../providers/chores/chores';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  chords: any[];
+  chores: any[];
 
   constructor(public navCtrl: NavController, private choresProvider: ChoresProvider) {
-    //this.choresProvider.query().subscribe(result => (this.cardItems = result, this.cardItemsLength = result.length));
-  }
+    this.choresProvider.getChores().subscribe(result => (this.chores = result));
+
+    // this.chores = [
+    //     {'id': 1,
+    //     'title': 'aufräumen',
+    //     'reward':'2.6',
+    //     'state' : 'open'
+    //     },
+    //     {
+    //     'id': 2,
+    //     'title': 'putzen',
+    //     'reward':'2.6',
+    //     'state': 'done'
+    //     },
+    //     {'id': 3,
+    //     'title': 'spülen',
+    //     'reward':'2.2',
+    //     'state' : 'inrev'
+    //     },
+    //
+    //   ]
+
+
+
+    }
+
+    choreDone(id:number){
+
+    }
+
 
 }
