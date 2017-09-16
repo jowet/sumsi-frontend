@@ -18,9 +18,15 @@ $img-heigth: 5vh;
 $chore-heigth: 3vh;
 
 // $global-font;
-img{
+.img{
   height: $img-heigth;
-  width: $img-heigth !important;
+  width: $img-heigth;
+}
+
+.title-image{
+  // height: $img-heigth;
+  width: 70% !important;
+  align:center
 }
 
 .background{
@@ -71,6 +77,12 @@ img{
 page-home {
 
   font-family:Helvetica;
+
+  //
+  // .img{
+  //   height: $img-heigth;
+  //   width: $img-heigth;
+  // }
 
 
     .heading-wrapper {
