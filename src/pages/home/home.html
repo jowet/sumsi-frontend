@@ -16,6 +16,8 @@
       <ion-card *ngIf="chore.attributes.state === 'opened'">
         {{chore.attributes.title}}
         {{chore.attributes.value/100| currency: 'EUR':true}}
+        <button ion-button (click)="markAsDone(chore.id)">
+        </button>
       </ion-card>
     </div>
   </div>
