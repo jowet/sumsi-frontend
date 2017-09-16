@@ -1,3 +1,26 @@
+$colorkontostand: #05aa9d;
+
 page-home {
+
+  .header .wrap {
+      width: auto;
+      margin: auto;
+      text-align: center;
+      position: relative;
+  }
+
+  .header .wrap .img_1, .header .wrap .img_2 {
+      position: absolute;
+      height: 13,5px;
+      width: auto;
+      top: 25px;
+  }
+
+  .konto-wrap {
+    color: $colorkontostand;
+  }
+
+
+
 
 }
