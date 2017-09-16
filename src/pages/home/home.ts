@@ -9,8 +9,9 @@ export class HomePage {
   chores: any[];
 
   constructor(public navCtrl: NavController, private choresProvider: ChoresProvider) {
-    this.choresProvider.getChores().subscribe(result => (this.chores = result));
+    this.choresProvider.getChores().subscribe(result => (this.chores = result.data));
 
+    console.log(this.chores);
     // this.chores = [
     //     {'id': 1,
     //     'title': 'aufräumen',

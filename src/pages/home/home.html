@@ -10,13 +10,25 @@
   <div style="text-align:center">
     <h1>To Dos</h1>
     <div *ngFor="let chore of chores">
-      <ion-card *ngIf="true">
-        {{chore.id}}
-
+      <ion-card *ngIf="chore.attributes.state === 'opened'">
+        {{chore.attributes.title}}
       </ion-card>
     </div>
   </div>
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div style="text-align:center">
+    <h1>For review</h1>
+    <div *ngFor="let chore of chores">
+      <ion-card *ngIf="chore.attributes.state === 'completed'">
+        {{chore.attributes.title}}
+      </ion-card>
+    </div>
+  </div>
+  <div style="text-align:center">
+    <h1>Done</h1>
+    <div *ngFor="let chore of chores">
+      <ion-card *ngIf="chore.attributes.state === 'closed'">
+        {{chore.attributes.title}}
+      </ion-card>
+    </div>
+  </div>
 </ion-content>
