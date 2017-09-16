@@ -24,9 +24,6 @@ $chore-heigth: 3vh;
 }
 
 .title-image{
-  // height: $img-heigth;
-  width: 70% !important;
-  align:center
 }
 
 .background{
@@ -102,8 +99,9 @@ page-home {
 
     .Line-Copy-4 {
       width: auto;
-      height: 1.5px;
-      border: solid 1px #9b9b9b;
+      height: 1px;
+      background: #9b9b9b;
+      border: none;
     }
 
 
