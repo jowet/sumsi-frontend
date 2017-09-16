@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Rx';
 
@@ -30,5 +30,17 @@ apiString: string;
   getChores(){
     return this.http.get(this.apiString+'/tasks').map(resp => resp.json());
   }
+
+  getLedger(){
+    return this.http.get(this.apiString).map(resp => resp.json());
+  }
+
+  updateChore(id, obj){
+    let headers = new Headers({ 'Content-Type': 'application/json', 'accept': 'application/json' })
+    let options = new RequestOptions({headers: headers});
+
+    return this.http.patch(this.apiString+'/tasks/'+id,JSON.stringify(obj), options).map(resp => resp.json());
+  }
+
 
 }

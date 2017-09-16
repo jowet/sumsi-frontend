@@ -3,6 +3,9 @@
     <ion-title>
       Uter
     </ion-title>
+    <ion-buttons end>
+    {{balance/100 | currency: 'EUR':true}}
+  </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -12,6 +15,7 @@
     <div *ngFor="let chore of chores">
       <ion-card *ngIf="chore.attributes.state === 'opened'">
         {{chore.attributes.title}}
+        {{chore.attributes.value/100| currency: 'EUR':true}}
       </ion-card>
     </div>
   </div>
@@ -20,6 +24,9 @@
     <div *ngFor="let chore of chores">
       <ion-card *ngIf="chore.attributes.state === 'completed'">
         {{chore.attributes.title}}
+        {{chore.attributes.value/100| currency: 'EUR':true}}
+        <button ion-button (click)="markAsDone(chore.id)">
+        </button>
       </ion-card>
     </div>
   </div>
@@ -28,6 +35,7 @@
     <div *ngFor="let chore of chores">
       <ion-card *ngIf="chore.attributes.state === 'closed'">
         {{chore.attributes.title}}
+        {{chore.attributes.value/100| currency: 'EUR':true}}
       </ion-card>
     </div>
   </div>

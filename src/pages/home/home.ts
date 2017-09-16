@@ -7,38 +7,24 @@ import { ChoresProvider } from '../../providers/chores/chores';
 })
 export class HomePage {
   chores: any[];
+  balance: any;
+
 
   constructor(public navCtrl: NavController, private choresProvider: ChoresProvider) {
-    this.choresProvider.getChores().subscribe(result => (this.chores = result.data));
-
-    console.log(this.chores);
-    // this.chores = [
-    //     {'id': 1,
-    //     'title': 'aufräumen',
-    //     'reward':'2.6',
-    //     'state' : 'open'
-    //     },
-    //     {
-    //     'id': 2,
-    //     'title': 'putzen',
-    //     'reward':'2.6',
-    //     'state': 'done'
-    //     },
-    //     {'id': 3,
-    //     'title': 'spülen',
-    //     'reward':'2.2',
-    //     'state' : 'inrev'
-    //     },
-    //
-    //   ]
-
-
-
+    // console.log(this.chores);
+    // self=this;
+    this.loadData();
+    // console.log('balance'+this.balance);
     }
 
-    choreDone(id:number){
-
+    markAsDone(id:any){
+      this.choresProvider.updateChore(id, {'task': {'state':'closed'}}).subscribe(data => {this.loadData()});
     }
 
+
+    loadData(){
+      this.choresProvider.getChores().subscribe(result => (this.chores = result.data));
+      this.choresProvider.getLedger().subscribe(result => (this.balance = result.data.attributes.balance));
+    }
 
 }
