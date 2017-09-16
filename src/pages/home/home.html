@@ -39,8 +39,13 @@
         </ion-grid>
     </div>
 
+<div class="Line-Copy-4">
+</div>
 
-    <h1>To Dos</h1>
+    <div class="heading-wrapper">
+        <div class= "status">To Do</div>
+    </div>
+
     <div *ngFor="let chore of chores">
       <ion-card *ngIf="chore.attributes.state === 'opened'">
         <div>
@@ -53,6 +58,7 @@
         </button>
       </ion-card>
     </div>
+
   </div>
   <div style="text-align:center">
     <h1>For review</h1>
@@ -83,4 +89,6 @@
       </ion-card>
     </div>
   </div>
+
+
 </ion-content>

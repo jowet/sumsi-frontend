@@ -2,9 +2,14 @@ $background-color :  #02f002;
 $background-color-header :  #db0505;
 $colorkontostand: #05aa9d;
 
-$kontostand-height: 6vh;
-$kontostand-text-height : 3vh;
+$kontostand-height: 5.5vh;
+$kontostand-text-height : 3.5vh;
 
+$button-size: $kontostand-height + $kontostand-text-height;
+
+$plus-size: 5.5vh;
+
+$status-height : 3vh;
 // $global-font;
 
 .background{
@@ -16,19 +21,40 @@ $kontostand-text-height : 3vh;
 }
 
 #addChores {
-  width: 27.5px;
-  height: 50.5px;
+  width: $button-size;
+  height: $button-size;
   background-color: #05aa9d;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 2.5px 0 rgba(0, 115, 83, 0.25);
   border: solid 0.5px #05aa9d;
-  font-size: 6vh;
+  font-size: $plus-size;
   // float: right;
 }
 
 page-home {
 
+  font-family:Helvetica;
 
 
+    .heading-wrapper {
+        width: auto;
+        margin: auto;
+        text-align: left;
+        position: relative;
+    }
+
+    .status {
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      height: $status-height;
+      font-size: $status-height;
+    }
+
+    .Line-Copy-4 {
+      width: auto;
+      height: 1.5px;
+      border: solid 1px #9b9b9b;
+    }
 
 
   .header .wrap {
