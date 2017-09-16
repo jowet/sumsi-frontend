@@ -11,20 +11,32 @@
 
 <ion-content padding>
   <div style="text-align:center">
-    <div class="header">
+    <div class="header" style="display: inline">
         <div class="wrap">
             <h2>Annouks Sparschwein</h2>
         </div>
         <div style="height: 4px">
         </div>
-        <div class="wrap konto-wrap">
-            <div class="Kontostand">
-                {{balance/100 | currency: 'EUR':true}}
-            </div>
-            <div class="Kontostand-text">
-                Kontostand
-            </div>
-        </div>
+        <ion-grid>
+          <ion-row>
+            <ion-col width-10></ion-col>
+            <ion-col width-80>
+              <div class="wrap konto-wrap">
+                <div class="Kontostand">
+                    {{balance/100 | currency: 'EUR':true}}
+                </div>
+                <div class="Kontostand-text">
+                    Kontostand
+                </div>
+              </div>
+            </ion-col>
+            <ion-col width-10>
+              <div style="text-align:right">
+                <button ion-button round (click)="addChore()" id="addChores">+</button>
+              </div>
+            </ion-col>
+            </ion-row>
+        </ion-grid>
     </div>
 
 

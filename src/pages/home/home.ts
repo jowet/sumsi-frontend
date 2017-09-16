@@ -27,4 +27,8 @@ export class HomePage {
       this.choresProvider.getLedger().subscribe(result => (this.balance = result.data.attributes.balance));
     }
 
+    addChore(){
+      
+    }
+
 }

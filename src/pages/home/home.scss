@@ -2,12 +2,27 @@ $background-color :  #02f002;
 $background-color-header :  #db0505;
 $colorkontostand: #05aa9d;
 
+$kontostand-height: 6vh;
+$kontostand-text-height : 3vh;
+
+// $global-font;
+
 .background{
   background-color:  $background-color;
 }
 
 .toolbar-background {
   background-color: $background-color-header;
+}
+
+#addChores {
+  width: 27.5px;
+  height: 50.5px;
+  background-color: #05aa9d;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 2.5px 0 rgba(0, 115, 83, 0.25);
+  border: solid 0.5px #05aa9d;
+  font-size: 6vh;
+  // float: right;
 }
 
 page-home {
@@ -32,6 +47,16 @@ page-home {
 
   .konto-wrap {
     color: $colorkontostand;
+  }
+
+  .Kontostand {
+    height: $kontostand-height;
+    font-size: $kontostand-height;
+  }
+
+  .Kontostand-text{
+    height: $kontostand-text-height;
+    font-size: $kontostand-text-height;
   }
 
 
