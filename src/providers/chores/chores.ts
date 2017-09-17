@@ -17,7 +17,7 @@ apiString: string;
 // status:
 
   constructor(public http: Http) {
-    this.apiString = "http://sumsi-api.eu-central-1.elasticbeanstalk.com/api/ledgers/1";
+    this.apiString = "http://sumsiapi-env.n2eirghx2d.eu-central-1.elasticbeanstalk.com/api/ledgers/1";
   }
 
   postChore(id: number, title: string, reward: any){
